@@ -1,7 +1,8 @@
 # 🌐 FrontWeaver
-#### Crafting Clean & Creative Web Interfaces with HTML & CSS
+#### Crafting Clean & Creative Web Interfaces with HTML & CSS.
 
 ## 📖 Table of Contents
+
 - Introduction
   
 - Features
@@ -16,7 +17,9 @@
 
 ## 📌 Introduction
 
-FrontWeaver is a collection of mini front-end web development projects built using HTML and CSS. It serves as a creative playground to practice modern layouts, responsive designs, and clean UI building — all without JavaScript. Ideal for beginners and frontend enthusiasts aiming to sharpen their skills.
+FrontWeaver is a collection of mini front-end web development projects taht are built using HTML and CSS. 
+It serves as a creative playground to practice modern layouts, responsive designs, and clean UI building — all without JavaScript. 
+Ideal for beginners and frontend enthusiasts aiming to sharpen their skills.
 
 ## ⚙️ Features
 
@@ -32,11 +35,11 @@ FrontWeaver is a collection of mini front-end web development projects built usi
 
 ## 🧑‍💻 Use Cases
 
-- Strengthen your core HTML/CSS knowledge
+- Strengthen your core HTML/CSS knowledge.
 
-- Build a portfolio of mini front-end projects
+- Build a portfolio of mini front-end projects.
 
-- Use as a starter template for UI challenges or creative designs
+- Use as a starter template for UI challenges or creative designs.
 
 - Learn how to build responsive, aesthetic web pages
 

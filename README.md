@@ -1,5 +1,5 @@
 # 🌐 FrontWeaver
-####  Crafting Clean & Creative Web Interfaces with the help of HTML & CSS.
+####  - Crafting Clean & Creative Web Interfaces with the help of HTML & CSS.
 
 ## 📖 Table of Contents
 
@@ -14,6 +14,7 @@
 - How to Use
 
 - Contributing
+
 
 ## 📌 Introduction
 
@@ -32,6 +33,7 @@ Ideal for beginners and frontend enthusiasts aiming to sharpen their skills.
 - 💼 Reusable components like navbars, cards, and footers.
 
 - 💡 Clean code and folder structure for easy navigation.
+
 
 ## 🧑‍💻 Use Cases
 

@@ -1,7 +1,7 @@
 # 🌐 FrontWeaver
 ####  - Crafting Clean & Creative Web Interfaces with the help of HTML & CSS.
 
-## 📖 Table of Contents
+## 📖 Table of Contents 
 
 - Introduction
   
@@ -11,9 +11,9 @@
 
 - Live Projects / Thumbnails
 
-- How to Use
+- How to Use them
 
-- Contributing
+- Contributions
 
 
 ## 📌 Introduction

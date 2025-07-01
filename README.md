@@ -35,15 +35,15 @@ Ideal for beginners and frontend enthusiasts aiming to sharpen their skills.
 - 💡 Clean code and folder structure for easy navigation.
 
 
-## 🧑‍💻 Use Cases
+## 🧑‍💻 Use Cases 
 
-- Strengthen your core HTML/CSS knowledge.
+- Strengthening your core HTML/CSS knowledge.
 
-- Build a portfolio of mini front-end projects.
+- Build simple portfolio of mini front-end projects.
 
 - Use as a starter template for UI challenges or creative designs.
 
-- Learn how to build responsive, aesthetic web pages.
+- Learn how to build responsive, aesthetic web pages in frontend.
 
 - Ideal for college assignments, workshops, or bootcamps.
 

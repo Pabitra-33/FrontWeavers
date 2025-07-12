@@ -1,7 +1,7 @@
 # 🌐 FrontWeaver
 ####  - Crafting Clean & Creative Web Interfaces with the help of HTML & CSS.
 
-## 📖 Table of Contents 
+## 📖 Table of Contents  
 
 - Introduction
   

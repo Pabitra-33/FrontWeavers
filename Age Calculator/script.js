@@ -6,17 +6,24 @@ let buttonCalculate = document.getElementById("calculate");//button
 let result = document.getElementById("result");//result paragraph
 
 
-buttonCalculate.addEventListener("click", calculateAge);
+buttonCalculate.addEventListener("click", calculateAge);//adding the click event to the button
 
+//function to calculate age
 function calculateAge() {
-    let birthDate = new Date(userInput.value);
+    let birthDate = new Date(userInput.value); //getting user input date
+    if (userInput.value === "" || birthDate > new Date()) {
+        alert("Please enter a valid date of birth.");
+        return;
+    }
 
+    //extracting date, month, year from the user input date
     let date1 = birthDate.getDate();
     let month1 = birthDate.getMonth() + 1; // Months are zero-based
     let year1 = birthDate.getFullYear();
 
-    let today = new Date();
+    let today = new Date();//getting today's date
 
+    //extracting date, month, year from today's date
     let date2 = today.getDate();
     let month2 = today.getMonth() + 1; // Months are zero-based
     let year2 = today.getFullYear();
@@ -42,6 +49,7 @@ function calculateAge() {
         //get the number of days in previous month
         dateDiff = getDaysInMonth(year1, month1) + date2 - date1;
     }
+    
     
     if (monthDiff < 0) {
         monthDiff = 11;

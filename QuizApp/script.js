@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(response => response.json())
             .then(data => {
                 // Process and display quiz questions
+                displayQuizQuestions(data);
                 console.log(data);
             })
             .catch(error => {
@@ -25,10 +26,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 questionElement.classList.add('question');
                 questionElement.innerHTML = `
                     <h3>Question ${index + 1}</h3>
-                    <p>${question.question}</p>
-                    <ul>
-                        ${question.options.map(option => `<li>${option}</li>`).join('')}
-                    </ul>
+                    <div class="question-text">
+                        <p>${question.question}</p>
+                        <img src="${question.image}" alt="Question Image">
+                    </div>
+                    <div class="options">
+                        <ul>
+                            ${question.options.map(option => `<li>${option}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="answer">
+                        <strong>Answer:</strong> ${question.answer}
+                    </div>
                 `;
                 quizContainer.appendChild(questionElement);
             });

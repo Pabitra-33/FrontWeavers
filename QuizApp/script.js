@@ -8,6 +8,30 @@ const quizData = [
     correct: "d",
   },
   {
+    question: "What does DOM stand for?",
+    a: "Document Object Model",
+    b: "Display Object Management",
+    c: "Document Object Management",
+    d: "Display Object Model",
+    correct: "a",
+  },
+  {
+    question: "What is the correct syntax for referring to an external script called 'xxx.js'?",
+    a: "<script href='xxx.js'>",
+    b: "<script name='xxx.js'>",
+    c: "<script src='xxx.js'>",
+    d: "<script file='xxx.js'>",
+    correct: "c",
+  },
+  {
+    question: "Which HTML attribute is used to define inline styles?",
+    a: "font",
+    b: "class",
+    c: "style",
+    d: "styles",
+    correct: "c",
+  },
+  {
     question: "What does CSS stand for?",
     a: "Central Style Sheets",
     b: "Cascading Style Sheets",
@@ -45,8 +69,9 @@ const submitBtn = document.getElementById("submit");
 let currentQuiz = 0;
 let score = 0;
 
-loadQuiz();
+loadQuiz(); // Initial call to load the first quiz question
 
+// Load the quiz question and answers
 function loadQuiz() {
   deselectAnswers();
   const currentQuizData = quizData[currentQuiz];
@@ -57,10 +82,12 @@ function loadQuiz() {
   d_text.innerText = currentQuizData.d;
 }
 
+// Deselect all answer choices
 function deselectAnswers() {
   answerEls.forEach((answerEl) => (answerEl.checked = false));
 }
 
+// Get the selected answer
 function getSelected() {
   let answer;
   answerEls.forEach((answerEl) => {
@@ -71,6 +98,7 @@ function getSelected() {
   return answer;
 }
 
+// Handle the submit button click
 submitBtn.addEventListener("click", () => {
   const answer = getSelected();
   if (answer) {

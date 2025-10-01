@@ -1,74 +1,59 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
+  background: #222;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-h1 {
-    color: #007bff;
-    margin-bottom: 10px;
+.quiz-container {
+  background: #333;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-p {
-    margin-bottom: 15px;
+.quiz-container h2 {
+  margin-bottom: 15px;
 }
 
-a {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+.quiz-container ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
 }
 
-a:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+.quiz-container li {
+  margin: 10px 0;
 }
 
-#quiz-container {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.quiz-container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #ff4757;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-#quiz-container h2 {
-    margin-bottom: 10px;
-    color: #28a745;
+.quiz-container button:hover {
+  background: #e84118;
 }
 
-#quiz-container button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#quiz-container button:hover {
-    background-color: #218838;
-    transform: translateY(-2px);
-}
-#result {
-    margin-top: 20px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #dc3545;
-    text-align: center;
-    padding: 10px;
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-    border-radius: 5px;
+.quiz-container .score {
+  font-size: 18px;
+  margin-top: 15px;
+  text-align: center;
 }

@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to the Quiz App</h1>
-    <p>Test your knowledge with our quizzes!</p>
-    <div id="quiz-container">
-        <!-- Quiz content will be dynamically loaded here -->
-    </div>
-    
-    <a href="quiz.html">Start Quiz</a>
+  <div class="quiz-container" id="quiz">
+    <h2 id="question">Question Text</h2>
+    <ul>
+      <li>
+        <input type="radio" name="answer" id="a" class="answer">
+        <label for="a" id="a_text">Answer A</label>
+      </li>
+      <li>
+        <input type="radio" name="answer" id="b" class="answer">
+        <label for="b" id="b_text">Answer B</label>
+      </li>
+      <li>
+        <input type="radio" name="answer" id="c" class="answer">
+        <label for="c" id="c_text">Answer C</label>
+      </li>
+      <li>
+        <input type="radio" name="answer" id="d" class="answer">
+        <label for="d" id="d_text">Answer D</label>
+      </li>
+    </ul>
+    <button id="submit">Next</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

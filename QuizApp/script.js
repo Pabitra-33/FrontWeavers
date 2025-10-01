@@ -1,46 +1,91 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const quizContainer = document.getElementById('quiz-container');
-    if (quizContainer) {
-        quizContainer.innerHTML = '<p>Quiz will be loaded here.</p>';
-        // Load quiz questions dynamically
-        fetch('quiz-questions.json')
-            .then(response => response.json())
-            .then(data => {
-                // Process and display quiz questions
-                displayQuizQuestions(data);
-                console.log(data);
-            })
-            .catch(error => {
-                console.error('Error loading quiz questions:', error);
-            });
-    }
-    console.log("Quiz App Initialized");
-    // Additional JavaScript functionality can be added here
+const quizData = [
+  {
+    question: "Which language runs in a web browser?",
+    a: "Java",
+    b: "C",
+    c: "Python",
+    d: "JavaScript",
+    correct: "d",
+  },
+  {
+    question: "What does CSS stand for?",
+    a: "Central Style Sheets",
+    b: "Cascading Style Sheets",
+    c: "Computer Style Sheets",
+    d: "Creative Style Sheets",
+    correct: "b",
+  },
+  {
+    question: "What does HTML stand for?",
+    a: "Hyper Trainer Marking Language",
+    b: "Hyper Text Marketing Language",
+    c: "Hyper Text Markup Language",
+    d: "Hyper Tool Multi Language",
+    correct: "c",
+  },
+  {
+    question: "What year was JavaScript launched?",
+    a: "1996",
+    b: "1995",
+    c: "1994",
+    d: "None of the above",
+    correct: "b",
+  }
+];
 
-    function displayQuizQuestions(questions) {
-        const quizContainer = document.getElementById('quiz-container');
-        if (quizContainer) {
-            quizContainer.innerHTML = ''; // Clear previous content
-            questions.forEach((question, index) => {
-                const questionElement = document.createElement('div');
-                questionElement.classList.add('question');
-                questionElement.innerHTML = `
-                    <h3>Question ${index + 1}</h3>
-                    <div class="question-text">
-                        <p>${question.question}</p>
-                        <img src="${question.image}" alt="Question Image">
-                    </div>
-                    <div class="options">
-                        <ul>
-                            ${question.options.map(option => `<li>${option}</li>`).join('')}
-                        </ul>
-                    </div>
-                    <div class="answer">
-                        <strong>Answer:</strong> ${question.answer}
-                    </div>
-                `;
-                quizContainer.appendChild(questionElement);
-            });
-        }
+const quiz = document.getElementById("quiz");
+const answerEls = document.querySelectorAll(".answer");
+const questionEl = document.getElementById("question");
+const a_text = document.getElementById("a_text");
+const b_text = document.getElementById("b_text");
+const c_text = document.getElementById("c_text");
+const d_text = document.getElementById("d_text");
+const submitBtn = document.getElementById("submit");
+
+let currentQuiz = 0;
+let score = 0;
+
+loadQuiz();
+
+function loadQuiz() {
+  deselectAnswers();
+  const currentQuizData = quizData[currentQuiz];
+  questionEl.innerText = currentQuizData.question;
+  a_text.innerText = currentQuizData.a;
+  b_text.innerText = currentQuizData.b;
+  c_text.innerText = currentQuizData.c;
+  d_text.innerText = currentQuizData.d;
+}
+
+function deselectAnswers() {
+  answerEls.forEach((answerEl) => (answerEl.checked = false));
+}
+
+function getSelected() {
+  let answer;
+  answerEls.forEach((answerEl) => {
+    if (answerEl.checked) {
+      answer = answerEl.id;
     }
+  });
+  return answer;
+}
+
+submitBtn.addEventListener("click", () => {
+  const answer = getSelected();
+  if (answer) {
+    if (answer === quizData[currentQuiz].correct) {
+      score++;
+    }
+
+    currentQuiz++;
+    if (currentQuiz < quizData.length) {
+      loadQuiz();
+    } else {
+      quiz.innerHTML = `
+        <h2>You answered ${score}/${quizData.length} questions correctly 🎉</h2>
+        <button onclick="location.reload()">Reload</button>
+      `;
+    }
+  }
 });
